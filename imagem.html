@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galeria de Imagens Elegante</title>
+  <style>
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 15px 0;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s, background-color 0.3s;
+    padding: 8px 16px;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    background-color: #ffffff;
+    color: #6a0dad;
+}
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #f5e6f7, #e8f0fe);
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 40px;
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    header h1 {
+      font-size: 2em;
+      color: #444;
+    }
+
+    .search-box input {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 30px;
+      font-size: 16px;
+      width: 250px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: 0.3s ease;
+    }
+
+    .search-box input:focus {
+      outline: none;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.03);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    }
+	
+	
+
+  </style>
+</head>
+<body>
+   <nav>
+   <ul>
+            <li><a href="Página -inicial.html">Início</a></li>
+            <li><a href="imagem.html">Imagem</a></li>
+            <li><a href="video.html">Vídeos</a></li>
+            <li><a href="Música.html">Música</a></li>
+        </ul>
+	</nav>
+  <header>
+    <h1>Minha Galeria mpb 🌸</h1>
+    <div class="search-box">
+      <input type="text" placeholder="Pesquisar imagens...">
+    </div>
+  </header>
+
+  <section class="gallery">
+    <!-- Substitua os links abaixo pelas suas imagens -->
+    <img src="mpb - Copia.PNG" alt="Imagem 1">
+    <img src="Popular brasileiro.PNG" alt="Imagem 2">
+    <img src="People.JPG" alt="Imagem 3">
+    <img src="Quarteto.WEBP" alt="Imagem 4">
+    <img src="ney-matogrosso-pedro-luis-e-a-parede.WEBP" alt="Imagem 5">
+    <img src="Legião.JPG" alt="Imagem 6">
+  </section>
+
+</body>
+</html>
