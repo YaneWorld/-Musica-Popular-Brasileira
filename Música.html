@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Player de Músicas MP3</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap');
+
+    /* Fundo animado com gradiente */
+    body {
+      font-family: 'Quicksand', sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #333;
+      background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #a18cd1, #fbc2eb);
+      background-size: 400% 400%;
+      animation: gradientAnimation 20s ease infinite;
+    }
+
+    @keyframes gradientAnimation {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    header {
+      background-color: rgba(255, 255, 255, 0.2);
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+      backdrop-filter: blur(10px);
+      border-bottom: 2px solid rgba(255,255,255,0.4);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+      letter-spacing: 1px;
+    }
+
+    .search-container {
+      display: flex;
+      justify-content: center;
+      margin: 40px 0;
+    }
+
+    input[type="text"] {
+      padding: 12px 15px;
+      width: 300px;
+      border: 1px solid #ccc;
+      border-radius: 8px 0 0 8px;
+      font-size: 16px;
+      outline: none;
+      transition: all 0.3s ease;
+    }
+
+    input[type="text"]:focus {
+      border-color: #3498db;
+      box-shadow: 0 0 8px rgba(52, 152, 219, 0.4);
+    }
+
+    button {
+      padding: 12px 20px;
+      border: none;
+      background-color: #3498db;
+      color: white;
+      font-size: 16px;
+      border-radius: 0 8px 8px 0;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #2980b9;
+    }
+
+    .results {
+      max-width: 800px;
+      margin: 0 auto 60px auto;
+      padding: 30px;
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+      border: 2px solid #fff;
+      backdrop-filter: blur(5px);
+    }
+
+    .music-item {
+      padding: 15px 0;
+      border-bottom: 1px solid #eee;
+    }
+
+    .music-item:last-child {
+      border-bottom: none;
+    }
+
+    .music-item strong {
+      display: block;
+      font-size: 1.2em;
+      margin-bottom: 5px;
+    }
+
+    audio {
+      width: 100%;
+      outline: none;
+    }
+	nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 15px 0;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s, background-color 0.3s;
+    padding: 8px 16px;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    background-color: #ffffff;
+    color: #6a0dad;
+}
+  </style>
+</head>
+<body>
+ 
+    <nav>
+        <ul>
+            <li><a href="Página -inicial.html">Início</a></li>
+            <li><a href="Página -inicial.html">Imagem</a></li>
+            <li><a href="video.html">Vídeos</a></li>
+            <li><a href="Música.html">Música</a></li>
+        </ul>
+    </nav>
+  <header>
+    <h1>Player de Músicas MP3 🎵</h1>
+  </header>
+
+  <div class="search-container">
+    <input type="text" id="searchInput" placeholder="Buscar música...">
+    <button onclick="buscarMusicas()">Buscar</button>
+  </div>
+
+  <div class="results" id="results">
+    <div class="music-item" data-nome="Armandinho - Outra Vida">
+      <strong>Armandinho - Outra Vida</strong>
+      <audio controls src="Armandinho - Outra Vida.mp3"></audio>
+    </div>
+    <div class="music-item" data-nome="Capital Inicial - Primeiros Erros">
+      <strong>Capital Inicial - Primeiros Erros</strong>
+      <audio controls src="Capital Inicial - Primeiros Erros.mp3"></audio>
+    </div>
+    <div class="music-item" data-nome="Tempo Perdido - Legião Urbana">
+      <strong>Tempo Perdido - Legião Urbana</strong>
+      <audio controls src="Tempo Perdido - Legião Urbana.mp3"></audio>
+    </div>
+  </div>
+
+  <script>
+    function buscarMusicas() {
+      const termo = document.getElementById('searchInput').value.toLowerCase();
+      const musicas = document.querySelectorAll('.music-item');
+
+      musicas.forEach(musica => {
+        const nome = musica.dataset.nome.toLowerCase();
+        musica.style.display = nome.includes(termo) ? 'block' : 'none';
+      });
+    }
+  </script>
+
+</body>
+</html>
