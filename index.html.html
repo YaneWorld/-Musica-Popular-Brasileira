@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<style>
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body.fundo {
+    /* Gradiente elegante como fundo */
+    background: linear-gradient(135deg, #f8f4f9, #e0c3fc, #8ec5fc);
+    background-size: 400% 400%;
+    animation: gradiente 15s ease infinite;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #2c2c2c;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Animação do fundo gradiente */
+@keyframes gradiente {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 15px 0;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s, background-color 0.3s;
+    padding: 8px 16px;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    background-color: #ffffff;
+    color: #6a0dad;
+}
+
+/* Título com estilo refinado */
+h1 {
+    text-align: center;
+    font-size: 42px;
+    color: #3a0ca3;
+    margin-top: 40px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+</style>
+    <meta charset="UTF-8">
+    <title>Página Inicial</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="fundo">
+    <nav>
+        <ul>
+            <li><a href="Página -inicial.html">Início</a></li>
+            <li><a href="imagem.html">Imagem</a></li>
+            <li><a href="video.html">Vídeos</a></li>
+            <li><a href="Música.html">Música</a></li>
+        </ul>
+    </nav>
+
+    <h1>Bem-vindo ao Meu Projeto</h1>
+</body>
+</html>
